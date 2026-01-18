@@ -1,0 +1,309 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix go:   <http://purl.obolibrary.org/obo/GO_> .
+@prefix chebi:<http://purl.obolibrary.org/obo/CHEBI_> .
+@prefix hp:   <http://purl.obolibrary.org/obo/HP_> .
+@prefix ncbi: <https://www.ncbi.nlm.nih.gov/taxonomy/> .
+@prefix hsapdv: <http://purl.obolibrary.org/obo/HsapDv_> .
+@prefix fma: <http://purl.org/sig/ont/fma/> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+
+
+@prefix ma_r: <http://maternal-infant-adiposity.um.es/resource/> .
+@prefix ma_o: <http://maternal-infant-adiposity.um.es/ontology/> .
+
+#################################################
+# CLASES
+#################################################
+
+ma_r:Microbiota a rdfs:Class ;
+    rdfs:label "Microbiota"@en .
+
+ma_r:Metabolite a rdfs:Class ;
+    rdfs:label "Metabolite"@en .
+
+ma_r:EpigeneticProcess a rdfs:Class ;
+    rdfs:label "Epigenetic process"@en .
+
+ma_r:Phenotype a rdfs:Class ;
+    rdfs:label "Phenotype"@en .
+
+ma_r:LifeStage a rdfs:Class ;
+    rdfs:label "Life stage"@en .
+
+#################################################
+# MICROBIOTA (TAXONES)
+#################################################
+
+ma_r:Bifidobacterium a ma_r:Microbiota ;
+    rdfs:label "Bifidobacterium"@en ;
+    rdfs:seeAlso ncbi:1678 .
+
+ma_r:Bacteroides a ma_r:Microbiota ;
+    rdfs:label "Bacteroides"@en ;
+    rdfs:seeAlso ncbi:816 .
+
+ma_r:Lactobacillus a ma_r:Microbiota ;
+    rdfs:label "Lactobacillus"@en ;
+    rdfs:seeAlso ncbi:1578 .
+
+
+#################################################
+# SUBCLASES QUÍMICAS DE METABOLITOS (ChEBI)
+#################################################
+
+ma_r:ShortChainFattyAcid a rdfs:Class ;
+    rdfs:subClassOf ma_r:Metabolite ;
+    rdfs:label "Short-chain fatty acid"@en ;
+    rdfs:seeAlso chebi:26666 .
+
+ma_r:BranchedChainAminoAcid a rdfs:Class ;
+    rdfs:subClassOf ma_r:Metabolite ;
+    rdfs:label "Branched-chain amino acid"@en ;
+    rdfs:seeAlso chebi:22918 .
+
+ma_r:BileAcid a rdfs:Class ;
+    rdfs:subClassOf ma_r:Metabolite ;
+    rdfs:label "Bile acid"@en ;
+    rdfs:seeAlso chebi:138366 .
+
+
+#################################################
+# METABOLITOS CONCRETOS (ChEBI)
+#################################################
+
+ma_r:Butyrate a ma_r:ShortChainFattyAcid ;
+    rdfs:label "Butyrate"@en ;
+    rdfs:seeAlso chebi:17968 .
+
+ma_r:Propionate a ma_r:ShortChainFattyAcid ;
+    rdfs:label "Propionate"@en ;
+    rdfs:seeAlso chebi:17272 .
+
+ma_r:Acetate a ma_r:ShortChainFattyAcid ;
+    rdfs:label "Acetate"@en ;
+    rdfs:seeAlso chebi:30089 .
+
+ma_r:Lactate a ma_r:ShortChainFattyAcid ;
+    rdfs:label "Lactate"@en ;
+    rdfs:seeAlso chebi:24996 .
+
+ma_r:Valine a ma_r:BranchedChainAminoAcid ;
+    rdfs:label "Valine"@en ;
+    rdfs:seeAlso chebi:27266 .
+
+ma_r:Leucine a ma_r:BranchedChainAminoAcid ;
+    rdfs:label "Leucine"@en ;
+    rdfs:seeAlso chebi:25017 .
+
+ma_r:Isoleucine a ma_r:BranchedChainAminoAcid ;
+    rdfs:label "Isoleucine"@en ;
+    rdfs:seeAlso chebi:24898 .
+
+ma_r:DeoxycholicAcid a ma_r:BileAcid ;
+    rdfs:label "Deoxycholic acid"@en ;
+    rdfs:seeAlso chebi:28834 .
+
+
+#################################################
+# PROCESOS EPIGENÉTICOS (GO) 
+#################################################
+
+ma_r:EpigeneticRegulationOfGeneExpression a ma_r:EpigeneticProcess ;
+    rdfs:label "Epigenetic regulation of gene expression"@en ;
+    rdfs:seeAlso go:0040029 .
+
+ma_r:ChromatinRemodeling a ma_r:EpigeneticProcess ;
+    rdfs:label "Chromatin remodeling"@en ;
+    rdfs:seeAlso go:0006338 .
+
+ma_r:ChromatinOrganization a ma_r:EpigeneticProcess ;
+    rdfs:label "Chromatin organization"@en ;
+    rdfs:seeAlso go:0006325 .
+
+ma_r:RegulationOfChromatinOrganization a ma_r:EpigeneticProcess ;
+    rdfs:label "Regulation of chromatin organization"@en ;
+    rdfs:seeAlso go:0033044 .
+
+ma_r:PositiveRegulationOfLipidMetabolicProcess a ma_r:EpigeneticProcess ;
+    rdfs:label "Regulation of lipid metabolic process"@en ;
+    rdfs:seeAlso go:0019216 .
+
+
+#################################################
+# FENOTIPOS (HPO)
+#################################################
+
+ma_r:Obesity a ma_r:Phenotype ;
+    rdfs:label "Obesity"@en ;
+    rdfs:seeAlso hp:0001513 .
+
+ma_r:ChildhoodObesity a ma_r:Phenotype ;
+    rdfs:label "Childhood obesity"@en ;
+    rdfs:seeAlso hp:0001515 .
+
+ma_r:AbnormalAdiposeTissueMorphology a ma_r:Phenotype ;
+    rdfs:label "Abnormal adipose tissue morphology"@en ;
+    rdfs:seeAlso hp:0009124 .
+
+ma_r:InsulinResistance a ma_r:Phenotype ;
+    rdfs:label "Insulin resistance"@en ;
+    rdfs:seeAlso hp:0000855 .
+
+ma_r:IncreasedBMI a ma_r:Phenotype ;
+    rdfs:label "Increased body mass index"@en ;
+    rdfs:seeAlso hp:0031418 .
+
+ma_r:Hyperinsulinemia a ma_r:Phenotype ;
+    rdfs:label "Hyperinsulinemia"@en ;
+    rdfs:seeAlso hp:0000842 .
+
+#################################################
+# EJE MADRE–INFANTE
+#################################################
+
+ma_r:GutMicrobiota a ma_r:Microbiota ;
+    rdfs:label "Gut microbiota"@en .
+
+ma_r:MaternalMicrobiota a ma_r:Microbiota ;
+    rdfs:label "Maternal microbiota"@en .
+
+ma_r:InfantMicrobiota a ma_r:Microbiota ;
+    rdfs:label "Infant microbiota"@en .
+
+ma_r:MaternalEpigenome a ma_r:EpigeneticProcess ;
+    rdfs:label "Maternal epigenome"@en .
+
+ma_r:InfantEpigenome a ma_r:EpigeneticProcess ;
+    rdfs:label "Infant epigenome"@en .
+
+#################################################
+# ETAPAS DE LA VIDA
+#################################################
+
+ma_r:PrenatalStage a ma_r:LifeStage ;
+    rdfs:label "Prenatal stage"@en ;
+    rdfs:seeAlso hsapdv:0000045 .
+
+ma_r:NeonatalStage a ma_r:LifeStage ;
+    rdfs:label "Neonatal stage"@en ;
+    rdfs:seeAlso fma:fma0328420 .
+
+ma_r:Infancy a ma_r:LifeStage ;
+    rdfs:label "Infancy stage"@en ;
+    rdfs:seeAlso fma:fma0328421 .
+
+
+
+#################################################
+# PROPIEDADES (RELACIONES)
+#################################################
+
+# Producción biológica (microbiota → metabolitos)
+ro:0003000 a rdf:Property ;
+    rdfs:label "produces"@en .
+
+# Relación parte-todo / pertenencia
+ro:0000052 a rdf:Property ;
+    rdfs:label "characteristic of"@en .
+
+# Origen / procedencia (metabolito ← microbiota)
+ro:0001000 a rdf:Property ;
+    rdfs:label "derives from"@en .
+
+# Relación causal general (sin especificar mecanismo)
+ro:0002410 a rdf:Property ;
+    rdfs:label "causally related to"@en .
+
+# Regulación (genérica)
+ro:0002211 a rdf:Property ;
+    rdfs:label "regulates"@en .
+
+# Regulación positiva
+ro:0002213 a rdf:Property ;
+    rdfs:label "positively regulates"@en .
+
+# Regulación negativa
+ro:0002212 a rdf:Property ;
+    rdfs:label "negatively regulates"@en .
+
+# Relación temporal (proceso → etapa de la vida)
+ro:0002092 a rdf:Property ;
+    rdfs:label "happens during"@en .
+
+
+
+#################################################
+# TRIPLETAS BIOLÓGICAS
+#################################################
+
+### Composición de la microbiota intestinal
+ma_r:Bifidobacterium ro:0000052 ma_r:GutMicrobiota .
+ma_r:Bacteroides     ro:0000052 ma_r:GutMicrobiota .
+ma_r:Lactobacillus   ro:0000052 ma_r:GutMicrobiota .
+
+### Producción metabólica por la microbiota
+ma_r:Bifidobacterium ro:0003000 ma_r:Butyrate .
+ma_r:Bifidobacterium ro:0003000 ma_r:Lactate .
+
+ma_r:Bacteroides     ro:0003000 ma_r:Propionate .
+ma_r:Bacteroides     ro:0003000 ma_r:DeoxycholicAcid .
+
+ma_r:GutMicrobiota   ro:0003000 ma_r:Acetate .
+ma_r:GutMicrobiota   ro:0003000 ma_r:Valine .
+ma_r:GutMicrobiota   ro:0003000 ma_r:Leucine .
+ma_r:GutMicrobiota   ro:0003000 ma_r:Isoleucine .
+
+### Origen microbiano de los metabolitos
+ma_r:Butyrate        ro:0001000 ma_r:GutMicrobiota .
+ma_r:Propionate      ro:0001000 ma_r:GutMicrobiota .
+ma_r:Acetate         ro:0001000 ma_r:GutMicrobiota .
+ma_r:Lactate         ro:0001000 ma_r:GutMicrobiota .
+
+ma_r:Valine          ro:0001000 ma_r:GutMicrobiota .
+ma_r:Leucine         ro:0001000 ma_r:GutMicrobiota .
+ma_r:Isoleucine      ro:0001000 ma_r:GutMicrobiota .
+
+ma_r:DeoxycholicAcid ro:0001000 ma_r:GutMicrobiota .
+
+### Metabolitos → procesos epigenéticos
+ma_r:Butyrate        ro:0002213 ma_r:EpigeneticRegulationOfGeneExpression .
+ma_r:Butyrate        ro:0002213 ma_r:ChromatinRemodeling .
+
+ma_r:Propionate      ro:0002213 ma_r:ChromatinOrganization .
+ma_r:Propionate      ro:0002213 ma_r:RegulationOfChromatinOrganization .
+
+ma_r:DeoxycholicAcid ro:0002212 ma_r:EpigeneticRegulationOfGeneExpression .
+
+ma_r:Valine          ro:0002213 ma_r:PositiveRegulationOfLipidMetabolicProcess .
+ma_r:Leucine         ro:0002213 ma_r:PositiveRegulationOfLipidMetabolicProcess .
+ma_r:Isoleucine      ro:0002213 ma_r:PositiveRegulationOfLipidMetabolicProcess .
+
+### Procesos epigenéticos → fenotipos intermedios
+ma_r:EpigeneticRegulationOfGeneExpression ro:0002213 ma_r:IncreasedBMI .
+ma_r:ChromatinRemodeling                  ro:0002213 ma_r:InsulinResistance .
+ma_r:ChromatinOrganization                ro:0002213 ma_r:Hyperinsulinemia .
+ma_r:PositiveRegulationOfLipidMetabolicProcess ro:0002213 ma_r:IncreasedBMI .
+
+### Fenotipos intermedios → fenotipos clínicos finales
+ma_r:IncreasedBMI        ro:0002213 ma_r:ChildhoodObesity .
+ma_r:InsulinResistance  ro:0002213 ma_r:Obesity .
+ma_r:Hyperinsulinemia   ro:0002213 ma_r:Obesity .
+
+### Fenotipo final → alteración tisular
+ma_r:Obesity ro:0002410 ma_r:AbnormalAdiposeTissueMorphology .
+
+### Eje madre–infante
+ma_r:MaternalMicrobiota ro:0002410 ma_r:InfantMicrobiota .
+ma_r:MaternalEpigenome ro:0002410 ma_r:InfantEpigenome .
+
+### Dimensión temporal del desarrollo temprano
+ma_r:MaternalMicrobiota ro:0002092 ma_r:PrenatalStage .
+ma_r:InfantMicrobiota   ro:0002092 ma_r:NeonatalStage .
+ma_r:InfantMicrobiota   ro:0002092 ma_r:Infancy .
+
+ma_r:EpigeneticRegulationOfGeneExpression ro:0002092 ma_r:PrenatalStage .
+ma_r:ChromatinRemodeling                  ro:0002092 ma_r:NeonatalStage .
+ma_r:ChromatinOrganization                ro:0002092 ma_r:Infancy .
+

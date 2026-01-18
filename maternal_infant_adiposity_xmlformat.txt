@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="http://purl.obolibrary.org/obo/">
+
+  <rdfs:Class rdf:about="http://maternal-infant-adiposity.um.es/resource/Microbiota">
+    <rdfs:label xml:lang="en">Microbiota</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://maternal-infant-adiposity.um.es/resource/Metabolite">
+    <rdfs:label xml:lang="en">Metabolite</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://maternal-infant-adiposity.um.es/resource/EpigeneticProcess">
+    <rdfs:label xml:lang="en">Epigenetic process</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://maternal-infant-adiposity.um.es/resource/Phenotype">
+    <rdfs:label xml:lang="en">Phenotype</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://maternal-infant-adiposity.um.es/resource/LifeStage">
+    <rdfs:label xml:lang="en">Life stage</rdfs:label>
+  </rdfs:Class>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Bifidobacterium">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Microbiota"/>
+    <rdfs:label xml:lang="en">Bifidobacterium</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://www.ncbi.nlm.nih.gov/taxonomy/1678"/>
+    <ns0:RO_0000052 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+    <ns0:RO_0003000>
+      <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Butyrate">
+        <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/ShortChainFattyAcid"/>
+        <rdfs:label xml:lang="en">Butyrate</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17968"/>
+        <ns0:RO_0001000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+        <ns0:RO_0002213 rdf:resource="http://maternal-infant-adiposity.um.es/resource/EpigeneticRegulationOfGeneExpression"/>
+        <ns0:RO_0002213>
+          <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/ChromatinRemodeling">
+            <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/EpigeneticProcess"/>
+            <rdfs:label xml:lang="en">Chromatin remodeling</rdfs:label>
+            <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0006338"/>
+            <ns0:RO_0002213>
+              <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/InsulinResistance">
+                <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Phenotype"/>
+                <rdfs:label xml:lang="en">Insulin resistance</rdfs:label>
+                <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0000855"/>
+                <ns0:RO_0002213 rdf:resource="http://maternal-infant-adiposity.um.es/resource/Obesity"/>
+              </rdf:Description>
+            </ns0:RO_0002213>
+
+            <ns0:RO_0002092 rdf:resource="http://maternal-infant-adiposity.um.es/resource/NeonatalStage"/>
+          </rdf:Description>
+        </ns0:RO_0002213>
+
+      </rdf:Description>
+    </ns0:RO_0003000>
+
+    <ns0:RO_0003000>
+      <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Lactate">
+        <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/ShortChainFattyAcid"/>
+        <rdfs:label xml:lang="en">Lactate</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24996"/>
+        <ns0:RO_0001000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+      </rdf:Description>
+    </ns0:RO_0003000>
+
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Bacteroides">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Microbiota"/>
+    <rdfs:label xml:lang="en">Bacteroides</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://www.ncbi.nlm.nih.gov/taxonomy/816"/>
+    <ns0:RO_0000052 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+    <ns0:RO_0003000>
+      <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Propionate">
+        <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/ShortChainFattyAcid"/>
+        <rdfs:label xml:lang="en">Propionate</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17272"/>
+        <ns0:RO_0001000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+        <ns0:RO_0002213>
+          <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/ChromatinOrganization">
+            <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/EpigeneticProcess"/>
+            <rdfs:label xml:lang="en">Chromatin organization</rdfs:label>
+            <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0006325"/>
+            <ns0:RO_0002213>
+              <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Hyperinsulinemia">
+                <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Phenotype"/>
+                <rdfs:label xml:lang="en">Hyperinsulinemia</rdfs:label>
+                <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0000842"/>
+                <ns0:RO_0002213 rdf:resource="http://maternal-infant-adiposity.um.es/resource/Obesity"/>
+              </rdf:Description>
+            </ns0:RO_0002213>
+
+            <ns0:RO_0002092 rdf:resource="http://maternal-infant-adiposity.um.es/resource/Infancy"/>
+          </rdf:Description>
+        </ns0:RO_0002213>
+
+        <ns0:RO_0002213>
+          <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/RegulationOfChromatinOrganization">
+            <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/EpigeneticProcess"/>
+            <rdfs:label xml:lang="en">Regulation of chromatin organization</rdfs:label>
+            <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0033044"/>
+          </rdf:Description>
+        </ns0:RO_0002213>
+
+      </rdf:Description>
+    </ns0:RO_0003000>
+
+    <ns0:RO_0003000>
+      <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/DeoxycholicAcid">
+        <rdf:type>
+          <rdfs:Class rdf:about="http://maternal-infant-adiposity.um.es/resource/BileAcid">
+            <rdfs:subClassOf rdf:resource="http://maternal-infant-adiposity.um.es/resource/Metabolite"/>
+            <rdfs:label xml:lang="en">Bile acid</rdfs:label>
+            <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_138366"/>
+          </rdfs:Class>
+        </rdf:type>
+
+        <rdfs:label xml:lang="en">Deoxycholic acid</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28834"/>
+        <ns0:RO_0001000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+        <ns0:RO_0002212 rdf:resource="http://maternal-infant-adiposity.um.es/resource/EpigeneticRegulationOfGeneExpression"/>
+      </rdf:Description>
+    </ns0:RO_0003000>
+
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Lactobacillus">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Microbiota"/>
+    <rdfs:label xml:lang="en">Lactobacillus</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://www.ncbi.nlm.nih.gov/taxonomy/1578"/>
+    <ns0:RO_0000052 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+  </rdf:Description>
+
+  <rdfs:Class rdf:about="http://maternal-infant-adiposity.um.es/resource/ShortChainFattyAcid">
+    <rdfs:subClassOf rdf:resource="http://maternal-infant-adiposity.um.es/resource/Metabolite"/>
+    <rdfs:label xml:lang="en">Short-chain fatty acid</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26666"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://maternal-infant-adiposity.um.es/resource/BranchedChainAminoAcid">
+    <rdfs:subClassOf rdf:resource="http://maternal-infant-adiposity.um.es/resource/Metabolite"/>
+    <rdfs:label xml:lang="en">Branched-chain amino acid</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22918"/>
+  </rdfs:Class>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Acetate">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/ShortChainFattyAcid"/>
+    <rdfs:label xml:lang="en">Acetate</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30089"/>
+    <ns0:RO_0001000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Valine">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/BranchedChainAminoAcid"/>
+    <rdfs:label xml:lang="en">Valine</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27266"/>
+    <ns0:RO_0001000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+    <ns0:RO_0002213 rdf:resource="http://maternal-infant-adiposity.um.es/resource/PositiveRegulationOfLipidMetabolicProcess"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Leucine">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/BranchedChainAminoAcid"/>
+    <rdfs:label xml:lang="en">Leucine</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25017"/>
+    <ns0:RO_0001000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+    <ns0:RO_0002213 rdf:resource="http://maternal-infant-adiposity.um.es/resource/PositiveRegulationOfLipidMetabolicProcess"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Isoleucine">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/BranchedChainAminoAcid"/>
+    <rdfs:label xml:lang="en">Isoleucine</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24898"/>
+    <ns0:RO_0001000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota"/>
+    <ns0:RO_0002213 rdf:resource="http://maternal-infant-adiposity.um.es/resource/PositiveRegulationOfLipidMetabolicProcess"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/EpigeneticRegulationOfGeneExpression">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/EpigeneticProcess"/>
+    <rdfs:label xml:lang="en">Epigenetic regulation of gene expression</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0040029"/>
+    <ns0:RO_0002213 rdf:resource="http://maternal-infant-adiposity.um.es/resource/IncreasedBMI"/>
+    <ns0:RO_0002092 rdf:resource="http://maternal-infant-adiposity.um.es/resource/PrenatalStage"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/PositiveRegulationOfLipidMetabolicProcess">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/EpigeneticProcess"/>
+    <rdfs:label xml:lang="en">Regulation of lipid metabolic process</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/GO_0019216"/>
+    <ns0:RO_0002213 rdf:resource="http://maternal-infant-adiposity.um.es/resource/IncreasedBMI"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Obesity">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Phenotype"/>
+    <rdfs:label xml:lang="en">Obesity</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0001513"/>
+    <ns0:RO_0002410>
+      <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/AbnormalAdiposeTissueMorphology">
+        <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Phenotype"/>
+        <rdfs:label xml:lang="en">Abnormal adipose tissue morphology</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0009124"/>
+      </rdf:Description>
+    </ns0:RO_0002410>
+
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/ChildhoodObesity">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Phenotype"/>
+    <rdfs:label xml:lang="en">Childhood obesity</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0001515"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/IncreasedBMI">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Phenotype"/>
+    <rdfs:label xml:lang="en">Increased body mass index</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HP_0031418"/>
+    <ns0:RO_0002213 rdf:resource="http://maternal-infant-adiposity.um.es/resource/ChildhoodObesity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/GutMicrobiota">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Microbiota"/>
+    <rdfs:label xml:lang="en">Gut microbiota</rdfs:label>
+    <ns0:RO_0003000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/Acetate"/>
+    <ns0:RO_0003000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/Valine"/>
+    <ns0:RO_0003000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/Leucine"/>
+    <ns0:RO_0003000 rdf:resource="http://maternal-infant-adiposity.um.es/resource/Isoleucine"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/MaternalMicrobiota">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Microbiota"/>
+    <rdfs:label xml:lang="en">Maternal microbiota</rdfs:label>
+    <ns0:RO_0002410>
+      <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/InfantMicrobiota">
+        <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/Microbiota"/>
+        <rdfs:label xml:lang="en">Infant microbiota</rdfs:label>
+        <ns0:RO_0002092 rdf:resource="http://maternal-infant-adiposity.um.es/resource/NeonatalStage"/>
+        <ns0:RO_0002092 rdf:resource="http://maternal-infant-adiposity.um.es/resource/Infancy"/>
+      </rdf:Description>
+    </ns0:RO_0002410>
+
+    <ns0:RO_0002092 rdf:resource="http://maternal-infant-adiposity.um.es/resource/PrenatalStage"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/MaternalEpigenome">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/EpigeneticProcess"/>
+    <rdfs:label xml:lang="en">Maternal epigenome</rdfs:label>
+    <ns0:RO_0002410>
+      <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/InfantEpigenome">
+        <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/EpigeneticProcess"/>
+        <rdfs:label xml:lang="en">Infant epigenome</rdfs:label>
+      </rdf:Description>
+    </ns0:RO_0002410>
+
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/PrenatalStage">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/LifeStage"/>
+    <rdfs:label xml:lang="en">Prenatal stage</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/HsapDv_0000045"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/NeonatalStage">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/LifeStage"/>
+    <rdfs:label xml:lang="en">Neonatal stage</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/sig/ont/fma/fma0328420"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://maternal-infant-adiposity.um.es/resource/Infancy">
+    <rdf:type rdf:resource="http://maternal-infant-adiposity.um.es/resource/LifeStage"/>
+    <rdfs:label xml:lang="en">Infancy stage</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/sig/ont/fma/fma0328421"/>
+  </rdf:Description>
+
+  <rdf:Property rdf:about="http://purl.obolibrary.org/obo/RO_0003000">
+    <rdfs:label xml:lang="en">produces</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
+    <rdfs:label xml:lang="en">characteristic of</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.obolibrary.org/obo/RO_0001000">
+    <rdfs:label xml:lang="en">derives from</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.obolibrary.org/obo/RO_0002410">
+    <rdfs:label xml:lang="en">causally related to</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.obolibrary.org/obo/RO_0002211">
+    <rdfs:label xml:lang="en">regulates</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.obolibrary.org/obo/RO_0002213">
+    <rdfs:label xml:lang="en">positively regulates</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.obolibrary.org/obo/RO_0002212">
+    <rdfs:label xml:lang="en">negatively regulates</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.obolibrary.org/obo/RO_0002092">
+    <rdfs:label xml:lang="en">happens during</rdfs:label>
+  </rdf:Property>
+
+</rdf:RDF>
