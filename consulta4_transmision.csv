@@ -1,0 +1,4 @@
+"maternalEntity","relation","infantEntity","lifeStage"
+"http://maternal-infant-adiposity.um.es/resource/MaternalEpigenome","http://purl.obolibrary.org/obo/RO_0002410","http://maternal-infant-adiposity.um.es/resource/InfantEpigenome",NA
+"http://maternal-infant-adiposity.um.es/resource/Obesity","http://purl.obolibrary.org/obo/RO_0002410","http://maternal-infant-adiposity.um.es/resource/AbnormalAdiposeTissueMorphology",NA
+"http://maternal-infant-adiposity.um.es/resource/MaternalMicrobiota","http://purl.obolibrary.org/obo/RO_0002410","http://maternal-infant-adiposity.um.es/resource/InfantMicrobiota","http://maternal-infant-adiposity.um.es/resource/PrenatalStage"
